@@ -1,0 +1,42 @@
+global
+function math(context) {
+    return context.scopes.some(s => s.startsWith("meta.math"));
+}
+endglobal
+
+snippet mk "Inline Math" A
+\($1\)$0
+endsnippet
+
+snippet dm "Display Math" A
+\[
+    $1
+\]
+$0
+endsnippet
+
+// FRACTIONS (The classic speed booster)
+// Type // immediately expands to \frac{}{}
+context math(context)
+snippet // "Fraction" A
+\frac{$1}{$2}$0
+endsnippet
+
+// SUBSCRIPTS
+// Type a1 immediately becomes a_1
+context math(context)
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+// GREEK LETTERS
+// Type ;a for alpha, ;b for beta, etc.
+context math(context)
+snippet ;a "alpha" A
+\alpha
+endsnippet
+
+context math(context)
+snippet ;b "beta" A
+\beta
+endsnippet
