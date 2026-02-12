@@ -1,0 +1,533 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Chemistry sample 2 question solutions for term final}
+\author{@aranyaadheu}
+\date{24 Dec, 2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Covalent and Ionic Compounds}
+\textbf{Definition:}
+\begin{itemize}
+    \item \textbf{Ionic Compounds:} Formed by the complete transfer of electrons from a metal to a non-metal, resulting in electrostatic attraction between cations and anions.
+    \item \textbf{Covalent Compounds:} Formed by the sharing of electron pairs between two non-metal atoms.
+\end{itemize}
+
+\textbf{Comparison of Properties:}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Property} & \textbf{Ionic Compounds} & \textbf{Covalent Compounds} \\ \hline
+Bonding Type & Electrostatic attraction & Electron pair sharing \\ \hline
+Physical State & Usually crystalline solids & Solids, liquids, or gases \\ \hline
+Melting/Boiling Point & Very high & Relatively low \\ \hline
+Conductivity & Conducts in molten/aqueous state & Generally non-conductors \\ \hline
+Solubility & Soluble in polar solvents (water) & Soluble in non-polar solvents \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{2. Resonance Structures and Formal Charges}
+\textbf{Sulfate Ion (\ce{SO4^{2-}}):}
+The most stable resonance structure involves two $S=O$ double bonds and two $S-O$ single bonds to minimize formal charges.
+\[ \text{Formal Charge (FC)} = \text{Valence electrons} - (\text{Non-bonding electrons} + \frac{1}{2}\text{Bonding electrons}) \]
+For $S=O$: $FC = 6 - (0 + 4) = 0$. For $S-O^-$: $FC = 6 - (6 + 1) = -1$. Sulfur: $6 - (0 + 6) = 0$.
+
+\textbf{Carbonate Ion (\ce{CO3^{2-}}):}
+Carbonate has three equivalent resonance structures where one oxygen is double-bonded and two are single-bonded with a $-1$ charge each.
+
+\section*{3. Factors Governing Bond Formation}
+\begin{itemize}
+    \item \textbf{Ionic Bond:}
+    \begin{enumerate}
+        \item Low Ionization Energy of the metal.
+        \item High Electron Affinity of the non-metal.
+        \item High Lattice Energy of the resulting compound.
+    \end{enumerate}
+    \item \textbf{Covalent Bond:}
+    \begin{enumerate}
+        \item High electronegativity of both atoms.
+        \item Small difference in electronegativity ($\Delta EN < 1.7$).
+        \item High electron density between nuclei.
+    \end{enumerate}
+\end{itemize}
+
+\section*{4. Lattice Energy}
+\textbf{Definition:} Lattice energy is the energy released when one mole of an ionic crystalline compound is formed from gaseous ions.
+\[ \ce{Na+(g) + Cl-(g) -> NaCl(s)} + \text{Lattice Energy} \]
+\textbf{Example:} For \ce{NaCl}, the lattice energy is approximately $-787 \text{ kJ/mol}$. The negative sign indicates energy is released, making the crystal stable.
+
+\section*{5. Trend in Lattice Energy: NaCl, KCl, RbCl}
+Lattice energy ($U$) is governed by Coulomb's Law: $U \propto \frac{Q_1 Q_2}{r_0}$, where $r_0$ is the sum of ionic radii.
+\begin{itemize}
+    \item All three have the same charges ($+1, -1$).
+    \item Ionic radii increase in the order: $\ce{Na+} < \ce{K+} < \ce{Rb+}$.
+    \item Therefore, the inter-ionic distance $r_0$ increases, and Lattice Energy \textbf{decreases}.
+    \item \textbf{Trend:} $\text{NaCl} > \text{KCl} > \text{RbCl}$.
+\end{itemize}
+
+\section*{6. Melting Point: NaCl vs. CCl$_4$}
+\begin{itemize}
+    \item \textbf{\ce{NaCl}:} Is an ionic compound held together by strong \textbf{electrostatic forces} in a 3D lattice. Breaking these requires massive energy, leading to a high M.P. ($801^\circ\text{C}$).
+    \item \textbf{\ce{CCl4}:} Is a non-polar covalent molecule held by weak \textbf{London dispersion forces}. These are easily overcome, resulting in a low M.P. ($-23^\circ\text{C}$).
+\end{itemize}
+
+\section*{7. Coordinate Covalent Bond}
+A coordinate bond (dative bond) occurs when \textbf{both} electrons in the shared pair come from a single atom.
+\textbf{Example:} Ammonium ion (\ce{NH4+}). Ammonia (\ce{NH3}) donates its lone pair to an $H^+$ ion.
+\[ \ce{H3N: + H+ -> [H3N \rightarrow H]+} \]
+
+\section*{8. Complex Compounds and Bonding}
+A \textbf{coordinate bond} is the primary bond in coordination complexes where ligands donate electron pairs to a central metal ion.
+\begin{itemize}
+    \item \textbf{\ce{[Cu(NH3)6]Cl2}}: Coordinate bonds between $\ce{Cu^{2+}}$ and $\ce{NH3}$; Ionic bonds between the complex cation and \ce{Cl-}.
+    \item \textbf{\ce{K2[Ni(CN)4]}}: Ionic bonds between \ce{K+} and the complex anion; Coordinate bonds between $\ce{Ni^{2+}}$ and \ce{CN-}.
+\end{itemize}
+
+\section*{9. Polar vs. Non-polar Covalent Bonds}
+\begin{itemize}
+    \item \textbf{Polar:} Formed between atoms with different electronegativities (e.g., \ce{H-Cl}). Electrons are shifted toward the more electronegative atom, creating partial charges ($\delta+, \delta-$).
+    \item \textbf{Non-polar:} Formed between atoms with similar electronegativity (e.g., \ce{Cl-Cl}, \ce{H-H}). Electrons are shared equally.
+\end{itemize}
+
+\section*{10. Bond Length Trend and NH$_4$Cl Bonds}
+\textbf{Bond Length Trend:} As s-character increases, the bond length decreases.
+\[ sp^3 (25\% s) > sp^2 (33\% s) > sp (50\% s) \]
+Therefore, $sp^3$ has the longest bond and $sp$ the shortest.
+
+\textbf{Bonds in \ce{NH4Cl}:} It contains three types of bonds:
+1. \textbf{Covalent bonds} (N-H in \ce{NH3}).
+2. \textbf{Coordinate bond} (between \ce{NH3} and \ce{H+}).
+3. \textbf{Ionic bond} (between \ce{NH4+} and \ce{Cl-}).
+
+\section*{11. Hydrogen Bonding: Water vs. Dichloromethane}
+\textbf{Hydrogen Bond:} A strong intermolecular attraction between a Hydrogen atom (bonded to N, O, or F) and a lone pair on another N, O, or F.
+\begin{itemize}
+    \item \ce{H2O} forms extensive \textbf{Hydrogen bonds}, which require significant energy to break.
+    \item \ce{CH2Cl2} only has dipole-dipole interactions, which are much weaker. Thus, water has a much higher boiling point.
+\end{itemize}
+
+\section*{12. Solubility: Ethanol vs. Ethane}
+\begin{itemize}
+    \item \textbf{Ethanol (\ce{C2H5OH}):} Contains an $-OH$ group capable of forming \textbf{Hydrogen bonds} with water molecules.
+    \item \textbf{Ethane (\ce{C2H6}):} Is a non-polar hydrocarbon that cannot form H-bonds. It follows the "like dissolves like" rule and remains insoluble in polar water.
+\end{itemize}
+
+\section*{13. Bond Formation: CaF$_2$ and PF$_3$}
+\begin{itemize}
+    \item \textbf{\ce{CaF2} (Ionic):} Calcium (metal) loses 2 electrons to form \ce{Ca^{2+}}. Two Fluorine atoms (non-metals) each gain 1 electron to form \ce{F-}.
+    \item \textbf{\ce{PF3} (Covalent):} Phosphorus shares three of its valence electrons with three Fluorine atoms to complete their octets.
+\end{itemize}
+\textbf{Key Differences:} \ce{CaF2} has a high melting point and conducts electricity when molten, whereas \ce{PF3} has a low boiling point and is a non-conductor.
+
+\section*{14. Lewis Structures}
+Below are the Lewis structures for the specified molecules and ions. To represent these in \LaTeX, we use the valence shell electron pair repulsion (VSEPR) logic and formal charge distribution.
+
+\begin{itemize}
+    \item \textbf{\ce{NF3}}: Nitrogen is the central atom with one lone pair and three single bonds to Fluorine atoms.
+    \item \textbf{\ce{CO3^{2-}}}: Carbon is central, double-bonded to one Oxygen and single-bonded to two Oxygens (which carry the negative charges).
+    \item \textbf{\ce{SO4^{2-}}}: Sulfur is central, typically shown with two $S=O$ double bonds and two $S-O^-$ single bonds to minimize formal charge.
+    \item \textbf{\ce{XeF4}}: Xenon is central with four single bonds to Fluorine and two lone pairs (square planar geometry).
+    \item \textbf{\ce{SO3^{2-}}}: Sulfur is central with one lone pair, one $S=O$ double bond, and two $S-O^-$ single bonds.
+    \item \textbf{\ce{SO2Cl2}}: Sulfur is central, double-bonded to two Oxygens and single-bonded to two Chlorines.
+    \item \textbf{\ce{XeO3}}: Xenon is central with one lone pair and three $Xe=O$ double bonds (trigonal pyramidal).
+\end{itemize}
+
+\section*{15. Formal Charges for Carbonate and Nitrite}
+The formula for Formal Charge (FC) is: 
+$FC = V - (N + \frac{B}{2})$, where $V$ is valence electrons, $N$ is non-bonding electrons, and $B$ is bonding electrons.
+
+\textbf{Carbonate Ion (\ce{CO3^{2-}}):}
+\begin{itemize}
+    \item \textbf{Carbon:} $4 - (0 + \frac{8}{2}) = 0$
+    \item \textbf{Double-bonded Oxygen:} $6 - (4 + \frac{4}{2}) = 0$
+    \item \textbf{Single-bonded Oxygen:} $6 - (6 + \frac{2}{2}) = -1$
+\end{itemize}
+
+\textbf{Nitrite Ion (\ce{NO2^{-}}):}
+Structure: $[\text{O}=\text{N}-\text{O}]^-$
+\begin{itemize}
+    \item \textbf{Nitrogen:} $5 - (2 + \frac{6}{2}) = 0$
+    \item \textbf{Double-bonded Oxygen:} $6 - (4 + \frac{4}{2}) = 0$
+    \item \textbf{Single-bonded Oxygen:} $6 - (6 + \frac{2}{2}) = -1$
+\end{itemize}
+
+\section*{16. Resonance Structures of \ce{N2O} and \ce{ClO3-}}
+\textbf{Nitrous Oxide (\ce{N2O}):}
+Three main resonance contributors:
+\begin{enumerate}
+    \item $\ce{:{N} \equiv \text{N}^+ - \text{O}:^{3-}}$ (Major contributor: Negative charge on most electronegative atom, Oxygen).
+    \item $\ce{^-\text{:N} = \text{N}^+ = \text{O:}}$ (Significant contributor).
+    \item $\ce{^{2-}\text{:N} - \text{N}^+ \equiv \text{O}^+}$ (Least important: Large charge separation).
+\end{enumerate}
+
+\textbf{Chlorate Ion (\ce{ClO3-}):}
+Resonance involves moving the double bond position between the Chlorine and the three Oxygen atoms to distribute the charge.
+
+\section*{17. Polar and Nonpolar Covalent Bonds}
+\begin{itemize}
+    \item \textbf{Nonpolar Covalent Bond:} Occurs when electrons are shared equally between atoms with identical or very similar electronegativity.
+    \begin{itemize}
+        \item \textit{Example:} $\ce{Cl-Cl}$ in $\ce{Cl2}$ or $\ce{H-H}$ in $\ce{H2}$.
+    \end{itemize}
+    \item \textbf{Polar Covalent Bond:} Occurs when one atom is more electronegative than the other, causing an unequal sharing of electrons and a dipole moment.
+    \begin{itemize}
+        \item \textit{Example:} $\ce{H-Cl}$ (Chlorine is more electronegative) or $\ce{O-H}$ in water.
+    \end{itemize}
+\end{itemize}
+
+\section*{18. Chemical Reactions of \ce{NaCl} and \ce{AlCl3} with \ce{H2O}}
+\begin{itemize}
+    \item \textbf{Sodium Chloride (\ce{NaCl}):} Dissolves physically in water; it undergoes hydration but \textbf{not} a chemical reaction (hydrolysis). The pH remains neutral (~7).
+    \[ \ce{NaCl(s) ->[H2O] Na+(aq) + Cl-(aq)} \]
+    
+    \item \textbf{Aluminum Chloride (\ce{AlCl3}):} Undergoes \textbf{hydrolysis} because $\ce{Al^{3+}}$ is a small, highly charged cation. It reacts with water to form an acidic solution.
+    \[ \ce{AlCl3 + 3H2O -> Al(OH)3(s) + 3HCl(aq)} \]
+    Or more accurately in complex form:
+    \[ \ce{[Al(H2O)6]^{3+} + H2O <=> [Al(H2O)5(OH)]^{2+} + H3O+} \]
+\end{itemize}
+
+\section*{19. Color Variation in Silver Halides (\ce{AgF}, \ce{AgCl}, \ce{AgBr}, \ce{AgI})}
+The variation in color is explained by \textbf{Fajan's Rule} and the phenomenon of \textbf{polarization}.
+\begin{itemize}
+    \item As we move from \ce{F-} to \ce{I-}, the size of the anion increases.
+    \item Larger anions are more easily polarized by the \ce{Ag+} cation. 
+    \item Increased polarization leads to increased covalent character and a decrease in the energy gap between the valence and conduction bands.
+    \item \ce{AgF} (ionic) is colorless, while \ce{AgI} (most covalent) absorbs blue light and appears yellow.
+\end{itemize}
+
+\section*{20. Solubility: Ethanol vs. Ethane}
+\begin{itemize}
+    \item \textbf{Ethanol (\ce{CH3CH2OH}):} Contains a polar hydroxyl ($-OH$) group that can form \textbf{hydrogen bonds} with water molecules. Hence, it is highly soluble.
+    \item \textbf{Ethane (\ce{CH3CH3}):} A non-polar hydrocarbon that only possesses weak London dispersion forces. It cannot form hydrogen bonds with water and is therefore insoluble.
+\end{itemize}
+
+\section*{21. Chemical Reactions of \ce{KCl} and \ce{BCl3} with \ce{H2O}}
+\begin{itemize}
+    \item \textbf{\ce{KCl}:} Being a salt of a strong acid and a strong base, it dissolves in water without undergoing hydrolysis.
+    \[ \ce{KCl(s) ->[H2O] K+(aq) + Cl-(aq)} \]
+    \item \textbf{\ce{BCl3}:} A covalent halide that undergoes vigorous hydrolysis to form boric acid and hydrochloric acid.
+    \[ \ce{BCl3 + 3H2O -> H3BO3 + 3HCl} \]
+\end{itemize}
+
+\section*{22. pH, pOH, and Ion Concentrations}
+\textbf{Definitions:}
+\begin{itemize}
+    \item \textbf{pH:} The negative logarithm of the hydrogen ion concentration: $pH = -\log[\ce{H3O+}]$.
+    \item \textbf{pOH:} The negative logarithm of the hydroxide ion concentration: $pOH = -\log[\ce{OH-}]$.
+    \item \textbf{pH Scale:} Ranges from 0 (acidic) to 14 (basic), with 7 being neutral at $25^\circ\text{C}$.
+\end{itemize}
+
+\textbf{Calculations for pOH = 8.5:}
+\begin{enumerate}
+    \item $[\ce{OH-}] = 10^{-pOH} = 10^{-8.5} = 3.16 \times 10^{-9} \text{ M}$
+    \item Since $pH + pOH = 14$: $pH = 14 - 8.5 = 5.5$
+    \item $[\ce{H3O+}] = 10^{-pH} = 10^{-5.5} = 3.16 \times 10^{-6} \text{ M}$
+\end{enumerate}
+
+\section*{23. Intermolecular vs. Intramolecular Hydrogen Bonding}
+\begin{itemize}
+    \item \textbf{Intermolecular H-bonding:} Occurs \textbf{between} two or more separate molecules (e.g., \ce{H2O}, Ethanol). It increases boiling points.
+    \item \textbf{Intramolecular H-bonding:} Occurs \textbf{within} the same molecule between different functional groups (e.g., o-nitrophenol). It often decreases solubility in water.
+\end{itemize}
+
+\section*{24. Predicting Bond Polarity}
+Polarity depends on the electronegativity difference ($\Delta\chi$):
+\begin{itemize}
+    \item \textbf{C--O:} $|2.5 - 3.5| = 1.0$
+    \item \textbf{C--S:} $|2.5 - 2.5| = 0.0$
+    \item \textbf{H--Br:} $|2.1 - 2.8| = 0.7$
+\end{itemize}
+\textbf{Conclusion:} The \textbf{C--O bond} is the most polar because it has the largest electronegativity difference.
+
+\section*{25. Polarity of \ce{CCl4} and Bent \ce{CO2}}
+\begin{itemize}
+    \item \textbf{\ce{CCl4} (Non-polar):} Even though \ce{C-Cl} bonds are polar, the symmetrical tetrahedral geometry causes the individual bond dipoles to cancel each other out.
+    \item \textbf{Bent \ce{CO2} (Polar):} In a hypothetical bent geometry, the bond dipoles would not cancel out, resulting in a net molecular dipole moment.
+\end{itemize}
+
+\section*{26. Solubility of Ionic Compounds in Water}
+Although water is covalent, it is highly polar. 
+\begin{itemize}
+    \item \textbf{Ion-Dipole Interaction:} The partial negative oxygen of \ce{H2O} attracts the cation ($\ce{Na+}$), and the partial positive hydrogens attract the anion ($\ce{Cl-}$).
+    \item If the \textbf{Hydration Energy} released exceeds the \textbf{Lattice Energy} of the crystal, the compound dissolves.
+\end{itemize}
+
+\section*{27. Water as a Universal Solvent}
+Water's effectiveness as a solvent is due to:
+\begin{enumerate}
+    \item \textbf{High Dielectric Constant:} It reduces the electrostatic force between ions.
+    \item \textbf{Structure:} A bent V-shape (approx. $104.5^\circ$) with $sp^3$ hybridization.
+    \item \textbf{Bonding:} Highly polar \ce{O-H} bonds and the ability to form four hydrogen bonds per molecule.
+\end{enumerate}
+
+\section*{28. Bonding in Specific Compounds}
+Different types of chemical bonds are present in the following:
+\begin{itemize}
+    \item \textbf{(i) \ce{MgCl2}:} Primarily \textbf{ionic bonds} between the \ce{Mg^{2+}} cation and \ce{Cl-} anions.
+    \item \textbf{(ii) \ce{(H2O)_n}:} Individual molecules have polar \textbf{covalent bonds}; however, the "n" signifies an assembly held by \textbf{hydrogen bonds}.
+    \item \textbf{(iii) \ce{[Fe(NH3)6]Cl2}:} Contains \textbf{coordinate covalent bonds} between \ce{Fe^{2+}} and \ce{NH3} ligands, and \textbf{ionic bonds} between the complex cation and \ce{Cl-} ions.
+\end{itemize}
+
+\section*{29. Acid-Base Concepts}
+\begin{enumerate}
+    \item \textbf{Arrhenius Concept:} Acids produce \ce{H+} ions in water (e.g., \ce{HCl}), and bases produce \ce{OH-} ions (e.g., \ce{NaOH}).
+    \item \textbf{Brønsted-Lowry Concept:} Acids are proton (\ce{H+}) donors, and bases are proton acceptors.
+    \item \textbf{Lewis Concept:} Acids are electron-pair acceptors (e.g., \ce{BF3}), and bases are electron-pair donors (e.g., \ce{:NH3}).
+\end{enumerate}
+
+\section*{30. Conjugate Acid-Base Pairs}
+A conjugate acid-base pair differs by only one proton (\ce{H+}).
+\begin{itemize}
+    \item \textbf{Conjugate Acids (add \ce{H+}):}
+    \begin{itemize}
+        \item \ce{HCO3-} $\rightarrow$ \ce{H2CO3}
+        \item \ce{HO-} $\rightarrow$ \ce{H2O}
+        \item \ce{CN-} $\rightarrow$ \ce{HCN}
+        \item \ce{H2PO4-} $\rightarrow$ \ce{H3PO4}
+    \end{itemize}
+    \item \textbf{Conjugate Bases (remove \ce{H+}):}
+    \begin{itemize}
+        \item \ce{H2O} $\rightarrow$ \ce{OH-}
+        \item \ce{HClO4} $\rightarrow$ \ce{ClO4-}
+        \item \ce{HCN} $\rightarrow$ \ce{CN-}
+    \end{itemize}
+\end{itemize}
+
+\section*{31. pH and pOH Calculations}
+\textbf{pH Definition:} $pH = -\log[\ce{H3O+}]$. \textbf{pOH Definition:} $pOH = -\log[\ce{OH-}]$. 
+Relation: $pH + pOH = 14$ at $25^\circ\text{C}$.
+
+\begin{itemize}
+    \item \textbf{If pH = 5.50:} $pOH = 14 - 5.50 = 8.50$. Thus, $[\ce{OH-}] = 10^{-8.50} = 3.16 \times 10^{-9} \text{ M}$.
+    \item \textbf{0.10 M \ce{NaOH}:} Since it is a strong base, $[\ce{OH-}] = 0.10 \text{ M}$. $pOH = -\log(0.10) = 1$. $pH = 14 - 1 = 13$.
+    \item \textbf{Human Blood (pH 7.45):} $[\ce{H3O+}] = 10^{-7.45} = 3.55 \times 10^{-8} \text{ M}$. $pOH = 14 - 7.45 = 6.55 \implies [\ce{OH-}] = 2.82 \times 10^{-7} \text{ M}$.
+\end{itemize}
+
+\section*{32. Buffer Solutions}
+\textbf{Definition:} A solution that resists changes in pH when small amounts of acid or base are added.
+\begin{itemize}
+    \item \textbf{Acidic Buffer:} Weak acid + its salt with a strong base (e.g., \ce{CH3COOH} + \ce{CH3COONa}).
+    \item \textbf{Basic Buffer:} Weak base + its salt with a strong acid (e.g., \ce{NH4OH} + \ce{NH4Cl}).
+\end{itemize}
+\textbf{Buffer Action:} In an acetate buffer, added \ce{H+} is neutralized by \ce{CH3COO-}, and added \ce{OH-} is neutralized by \ce{CH3COOH}, keeping the pH stable.
+
+\section*{33. Salt Hydrolysis and Solution pH}
+Predicting if a solution is acidic, basic, or neutral:
+\begin{itemize}
+    \item \textbf{\ce{LiClO4}:} Neutral (Salt of strong acid \ce{HClO4} and strong base \ce{LiOH}).
+    \item \textbf{\ce{FeCl3}:} Acidic (Small, highly charged $\ce{Fe^{3+}}$ undergoes hydrolysis to release \ce{H+}).
+    \item \textbf{\ce{Na3PO4}:} Basic (Anion \ce{PO4^{3-}} comes from a weak acid \ce{H3PO4} and reacts with water to produce \ce{OH-}).
+    \item \textbf{\ce{NH4CN}:} Basic (Since $K_b$ of \ce{CN-} is greater than $K_a$ of \ce{NH4+}).
+\end{itemize}
+
+\section*{34. Distinguishing Chemicals as Acids/Bases}
+Using Lewis/Brønsted definitions:
+\begin{itemize}
+    \item \textbf{Acids:} \ce{BF3} (Lewis acid), \ce{Ag+} (Lewis acid), \ce{SO3} (Lewis acid).
+    \item \textbf{Bases:} \ce{F-} (Lewis base), \ce{:NH3} (Lewis base), \ce{CaO} (Basic oxide).
+\end{itemize}
+
+\section*{35. Advanced pH and pOH Calculations}
+
+\textbf{9. pH of 0.1 M \ce{NH3} Solution ($K_b = 1.8 \times 10^{-5}$):}
+For a weak base:
+\[ [\ce{OH-}] = \sqrt{K_b \cdot C} = \sqrt{(1.8 \times 10^{-5})(0.1)} = 1.34 \times 10^{-3} \text{ M} \]
+\[ pOH = -\log(1.34 \times 10^{-3}) = 2.87 \]
+\[ pH = 14 - 2.87 = 11.13 \]
+
+\textbf{10. pH of 0.1 M \ce{CH3COOH} Solution ($K_a = 1.8 \times 10^{-5}$):}
+For a weak acid:
+\[ [\ce{H+}] = \sqrt{K_a \cdot C} = \sqrt{(1.8 \times 10^{-5})(0.1)} = 1.34 \times 10^{-3} \text{ M} \]
+\[ pH = -\log(1.34 \times 10^{-3}) = 2.87 \]
+
+\textbf{11. pH of 0.002 M \ce{CH3COOH} (2.3\% ionized):}
+\[ [\ce{H+}] = \text{Concentration} \times \text{degree of ionization} = 0.002 \times 0.023 = 4.6 \times 10^{-5} \text{ M} \]
+\[ pH = -\log(4.6 \times 10^{-5}) = 4.34 \]
+
+\section*{36. Buffer Action and Mechanism}
+
+\textbf{15. Buffer Action of \ce{NH4OH} and \ce{NH4Cl}:}
+This is a basic buffer.
+\begin{itemize}
+    \item \textbf{Addition of acid (\ce{H+}):} The added \ce{H+} ions react with the weak base \ce{NH4OH} (or \ce{NH3}) to form \ce{NH4+}.
+    \[ \ce{NH3(aq) + H+(aq) -> NH4+(aq)} \]
+    \item \textbf{Addition of base (\ce{OH-}):} The added \ce{OH-} ions react with the \ce{NH4+} ions from the salt.
+    \[ \ce{NH4+(aq) + OH-(aq) -> NH3(aq) + H2O(l)} \]
+\end{itemize}
+
+\textbf{16. Buffer Action of \ce{CH3COOH} and \ce{CH3COONa}:}
+This is an acidic buffer.
+\begin{itemize}
+    \item \textbf{Addition of acid (\ce{H+}):} \ce{CH3COO- + H+ -> CH3COOH}
+    \item \textbf{Addition of base (\ce{OH-}):} \ce{CH3COOH + OH- -> CH3COO- + H2O}
+\end{itemize}
+
+\section*{37. Biological Buffer Systems}
+Human blood is a primary example of a biological buffer system. It maintains a pH of approximately 7.4 using:
+\begin{enumerate}
+    \item \textbf{Bicarbonate Buffer:} \ce{CO2 / HCO3-} system.
+    \item \textbf{Phosphate Buffer:} \ce{H2PO4- / HPO4^{2-}} system (mostly intracellular).
+    \item \textbf{Protein Buffers:} Hemoglobin and plasma proteins.
+\end{enumerate}
+
+\section*{38. Comparison of Lewis and Brønsted-Lowry Concepts}
+\begin{itemize}
+    \item \textbf{Brønsted-Lowry:} Focuses on \textbf{proton (\ce{H+}) transfer}. An acid is a proton donor, and a base is a proton acceptor.
+    \item \textbf{Lewis:} Focuses on \textbf{electron pair transfer}. An acid is an electron pair acceptor, and a base is an electron pair donor.
+    \item \textbf{Key Difference:} The Lewis theory is broader; it includes substances like \ce{BF3} and \ce{AlCl3} as acids even though they contain no hydrogen to donate.
+\end{itemize}
+
+\section*{39. Conjugate Pairs in Specific Reactions}
+In the following reactions, identify the acid (A), base (B), conjugate acid (CA), and conjugate base (CB):
+
+\textbf{(i) \ce{NH3 + H2O <=> NH4+ + OH-}}
+\begin{itemize}
+    \item \ce{NH3}: Base (B)
+    \item \ce{H2O}: Acid (A)
+    \item \ce{NH4+}: Conjugate Acid (CA)
+    \item \ce{OH-}: Conjugate Base (CB)
+\end{itemize}
+
+\textbf{(ii) \ce{HNO3 + H2O <=> H3O+ + NO3-}}
+\begin{itemize}
+    \item \ce{HNO3}: Acid (A)
+    \item \ce{H2O}: Base (B)
+    \item \ce{H3O+}: Conjugate Acid (CA)
+    \item \ce{NO3-}: Conjugate Base (CB)
+\end{itemize}
+
+\section*{40. Introduction to Chemical Kinetics}
+
+\textbf{1. Rate Law and Rate Equations:}
+The \textbf{Rate Law} is an expression that relates the rate of a chemical reaction to the molar concentration of the reactants raised to some power.
+For a general reaction $aA + bB \rightarrow \text{Products}$, the rate is given by: $Rate = k[A]^x [B]^y$.
+
+\textbf{Rate Equations for Specific Reactions:}
+\begin{enumerate}
+    \item \ce{H2 + Cl2 -> 2HCl}: $Rate = k[\ce{H2}][\ce{Cl2}]$ (assuming elementary)
+    \item \ce{PCl5 -> PCl3 + Cl2}: $Rate = k[\ce{PCl5}]$
+    \item \ce{H2 + I2 -> 2HI}: $Rate = k[\ce{H2}][\ce{I2}]$
+    \item \ce{2NO + 2H2 -> N2 + 2H2O}: $Rate = k[\ce{NO}]^2[\ce{H2}]$
+\end{enumerate}
+
+\section*{41. First-Order Reaction Calculations}
+
+\textbf{2. Rate Constant from Half-life:}
+Given $t_{1/2} = 20 \text{ minutes}$. For a first-order reaction:
+\[ k = \frac{0.693}{t_{1/2}} = \frac{0.693}{20} = 0.03465 \text{ min}^{-1} \]
+
+\textbf{3. Derivation for First-Order Rate Constant ($A \rightarrow \text{Products}$):}
+The differential rate law is $-\frac{d[A]}{dt} = k[A]$. Rearranging and integrating from $t=0$ to $t=t$:
+\[ \int_{[A]_0}^{[A]} \frac{d[A]}{[A]} = -k \int_{0}^{t} dt \implies \ln\left(\frac{[A]}{[A]_0}\right) = -kt \]
+\[ k = \frac{2.303}{t} \log\left(\frac{[A]_0}{[A]}\right) \]
+
+\textbf{4. Half-life of First-Order Reactions:}
+Half-life ($t_{1/2}$) is the time required for the concentration of a reactant to decrease to half its initial value.
+Substituting $[A] = \frac{[A]_0}{2}$ into the first-order equation:
+\[ t_{1/2} = \frac{\ln(2)}{k} = \frac{0.693}{k} \]
+This shows that $t_{1/2}$ is \textbf{independent} of the initial concentration $[A]_0$.
+
+\section*{42. Reaction Progress and Activation Energy}
+
+\textbf{5. Activation Energy ($E_a$):}
+Activation energy is the minimum amount of energy required by reactant molecules to undergo a chemical reaction.
+
+\textbf{6. Time to complete 90\% of a reaction:}
+Given $50\%$ completion in 23 min ($t_{1/2} = 23$).
+\[ k = \frac{0.693}{23} = 0.03013 \text{ min}^{-1} \]
+To complete 90\%, $[A] = 0.10[A]_0$:
+\[ t_{90\%} = \frac{2.303}{k} \log\left(\frac{1}{0.1}\right) = \frac{2.303}{0.03013}(1) = 76.43 \text{ minutes} \]
+
+\section*{43. Distinction and Kinetics Problems}
+
+\textbf{7. Order vs. Molecularity:}
+\begin{itemize}
+    \item \textbf{Order:} Sum of powers of concentration terms in the rate law; determined experimentally.
+    \item \textbf{Molecularity:} Number of reacting species taking part in an elementary reaction; always a whole number.
+\end{itemize}
+
+\textbf{8. Cyclopropane conversion ($k = 6.7 \times 10^{-4} \text{ s}^{-1}$):}
+\begin{itemize}
+    \item \textbf{(a)} $[A]$ after 8.8 min ($528 \text{ s}$):
+    $\ln[A] = \ln(0.25) - (6.7 \times 10^{-4} \times 528) \implies [A] = 0.175 \text{ M}$.
+    \item \textbf{(b)} Time to decrease to 0.15 M:
+    $t = \frac{2.303}{k} \log\left(\frac{0.25}{0.15}\right) = \frac{2.303}{6.7 \times 10^{-4}}(0.2218) = 762 \text{ s} \approx 12.7 \text{ min}$.
+\end{itemize}
+
+\textbf{9. Second-Order Kinetics (Iodine atoms):}
+For second order: $\frac{1}{[A]} - \frac{1}{[A]_0} = kt$
+Given $k = 7.0 \times 10^9 \text{ /M}\cdot\text{s}$, $[A]_0 = 0.086 \text{ M}$, $t = 120 \text{ s}$.
+The concentration $[A]$ after 2 min will be extremely low, essentially zero, due to the very high rate constant.
+
+\section*{44. Lewis Structures and Formal Charges}
+
+\textbf{26. Lewis Structures:}
+\begin{itemize}
+    \item \textbf{\ce{NF3}:} Nitrogen is the central atom with one lone pair and three single bonds to Fluorine atoms (each F has 3 lone pairs).
+    \item \textbf{\ce{CO3^{2-}}}: Carbon is central, double-bonded to one Oxygen and single-bonded to two Oxygens (which carry the negative charges).
+    \item \textbf{\ce{SO4^{2-}}}: Sulfur is central, typically shown with two $S=O$ double bonds and two $S-O^-$ single bonds to minimize formal charge.
+    \item \textbf{\ce{XeF4}}: Xenon is central with four single bonds to Fluorine and two lone pairs (square planar geometry).
+    \item \textbf{\ce{SO3^{2-}}}: Sulfur is central with one lone pair, one $S=O$ double bond, and two $S-O^-$ single bonds.
+    \item \textbf{\ce{SO2Cl2}}: Sulfur is central, double-bonded to two Oxygens and single-bonded to two Chlorines.
+    \item \textbf{\ce{XeO3}}: Xenon is central with one lone pair and three $Xe=O$ double bonds (trigonal pyramidal).
+\end{itemize}
+
+\textbf{27. Formal Charges for Carbonate (\ce{CO3^{2-}}) and Nitrite (\ce{NO2^{-}}):}
+Formula: $FC = V - (N + \frac{B}{2})$
+\begin{itemize}
+    \item \textbf{Carbonate:} Carbon (0), double-bonded Oxygen (0), single-bonded Oxygens ($-1$).
+    \item \textbf{Nitrite ($[\ce{O=N-O}]^-$):} Nitrogen (0), double-bonded Oxygen (0), single-bonded Oxygen ($-1$).
+\end{itemize}
+
+\section*{45. Solubility and Polar Characteristics}
+
+\textbf{28. Solubility of Ethanol vs. Ethane:}
+\begin{itemize}
+    \item \textbf{Ethanol (\ce{CH3CH2OH}):} Soluble because its polar $-OH$ group forms \textbf{hydrogen bonds} with water.
+    \item \textbf{Ethane (\ce{C2H6}):} Insoluble because it is a non-polar hydrocarbon and cannot form H-bonds.
+\end{itemize}
+
+\textbf{Dipole Moments in \ce{CCl4} and Bent \ce{CO2}:}
+\begin{itemize}
+    \item \textbf{\ce{CCl4}:} Non-polar; the tetrahedral symmetry causes individual bond dipoles to cancel.     \item \textbf{Bent \ce{CO2}:} Polar; in a bent configuration, the vector sum of bond dipoles would not be zero. \end{itemize}
+
+\section*{46. Kinetics: Rate Laws and Order}
+
+\textbf{Integrated Rate Law for First-Order Reactions ($A \rightarrow$ Products):}
+\[ \ln[A] = -kt + \ln[A]_0 \quad \text{or} \quad k = \frac{2.303}{t} \log \frac{[A]_0}{[A]} \]
+
+\textbf{Calculations:}
+\begin{enumerate}
+    \item \textbf{1st order half-life $k=49 \text{ s}^{-1}$:} $t_{1/2} = \frac{0.693}{49} = 0.0141 \text{ s}$.
+    \item \textbf{Complete 75\% if $t_{1/2}=2.5 \text{ min}$:} $75\%$ completion equals two half-lives. $t = 2 \times 2.5 = 5.0 \text{ minutes}$.
+    \item \textbf{Time for 1/3 remaining ($t_{1/2}=1000 \text{ s}$):}
+    \[ k = \frac{0.693}{1000} = 6.93 \times 10^{-4} \text{ s}^{-1} \]
+    \[ t = \frac{\ln(3)}{k} = \frac{1.0986}{6.93 \times 10^{-4}} = 1585 \text{ seconds} \]
+\end{enumerate}
+
+\section*{47. Enthalpy and Pseudo-First Order Reactions}
+
+\textbf{12. Pseudo-First Order Reaction:}
+A reaction that is truly higher-order but behaves as first-order because one reactant is in large excess.
+\textbf{Example:} Hydrolysis of cane sugar.
+\[ \ce{C12H22O11 + H2O -> C6H12O6 + C6H12O6} \]
+Since water is in excess, its concentration remains constant, and $Rate = k'[\ce{C12H22O11}]$.
+
+\textbf{13. Enthalpy of Reaction:}
+The heat change at constant pressure during a chemical reaction ($\Delta H = H_{products} - H_{reactants}$).
+\begin{itemize}
+    \item \textbf{Exothermic:} Energy is released, $\Delta H < 0$.     \item \textbf{Endothermic:} Energy is absorbed, $\Delta H > 0$. \end{itemize}
+
+\textbf{Rate Constant calculation for \ce{2N2O5 -> 4NO2 + O2}:}
+90\% reacts in 3600 s ($[A] = 0.1[A]_0$).
+\[ k = \frac{2.303}{3600} \log(10) = \frac{2.303}{3600}(1) = 6.4 \times 10^{-4} \text{ s}^{-1} \]
+
+\end{document}

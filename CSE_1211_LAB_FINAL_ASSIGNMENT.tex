@@ -1,0 +1,698 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{top=1in, bottom=1in, left=1in, right=1in}
+
+% --- Font Configuration (Times New Roman) ---
+\usepackage{mathptmx} 
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+
+% --- Formatting Configuration ---
+
+% Code Style
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.96,0.96,0.96}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize, % Monospaced font for code remains cleaner
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4,
+    language=C
+}
+
+\lstset{style=CStyle}
+
+% Output Box Style
+\newtcolorbox{outputbox}{
+    colback=black!85,
+    colframe=black!85,
+    coltext=white,
+    boxsep=5pt,
+    arc=4pt,
+    title=\textbf{Output:},
+    coltitle=white,
+    fonttitle=\bfseries
+}
+
+% Title Page Info
+\title{\textbf{Structured Programming Lab Final Assignment} }
+\author{\textbf{Name:} Aniruddha Aranya A Dheu\\ \textbf{ID:} 0182520012101113 \\ \textbf{Course:} CSE 1211 - Structured Programming}
+\date{04 December, 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ==========================================
+% PART 1: MID-TERM TOPICS
+% ==========================================
+
+\section{Intro to C}
+
+\subsection{Problem 1: Personal Information}
+\textbf{Objective:} Write a program to print your Name, ID, and Department on separate lines.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    printf("Name: aranyaadheu\n");
+    printf("ID: 23-12345-1\n");
+    printf("Dept: Computer Science\n");
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Name: aranyaadheu \\
+ID: 23-12345-1 \\
+Dept: Computer Science
+\end{outputbox}
+
+\subsection{Problem 2: Hello World with Tabs}
+\textbf{Objective:} Demonstrate the usage of tab escape sequences.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    printf("Hello\tWorld\tfrom\tC!");
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Hello\quad World\quad from\quad C!
+\end{outputbox}
+
+\section{Data Types and Format Specifiers}
+
+\subsection{Problem 1: Size of Data Types}
+\textbf{Objective:} Display the memory size of `int`, `float`, and `double`.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    printf("Size of int: %zu bytes\n", sizeof(int));
+    printf("Size of float: %zu bytes\n", sizeof(float));
+    printf("Size of double: %zu bytes\n", sizeof(double));
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Size of int: 4 bytes \\
+Size of float: 4 bytes \\
+Size of double: 8 bytes
+\end{outputbox}
+
+\subsection{Problem 2: Floating Point Precision}
+\textbf{Objective:} Print a float value with 2 decimal places.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    float pi = 3.1415926535;
+    printf("Original: %f\n", pi);
+    printf("Formatted: %.2f\n", pi);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Original: 3.141593 \\
+Formatted: 3.14
+\end{outputbox}
+
+\section{Tokens, Constants, and Operators}
+
+\subsection{Problem 1: Area of Circle}
+\textbf{Objective:} Calculate area using a defined constant.
+
+\begin{lstlisting}
+#include <stdio.h>
+#define PI 3.1416
+
+int main() {
+    float r = 5.0, area;
+    area = PI * r * r;
+    printf("Area of circle with radius %.1f is %.2f", r, area);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Area of circle with radius 5.0 is 78.54
+\end{outputbox}
+
+\subsection{Problem 2: Arithmetic Operators}
+\textbf{Objective:} Perform modulus and division operations.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int a = 17, b = 5;
+    printf("Quotient: %d\n", a / b);
+    printf("Remainder: %d\n", a % b);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Quotient: 3 \\
+Remainder: 2
+\end{outputbox}
+
+\section{Errors, Escape Sequences, ASCII, Booleans}
+
+\subsection{Problem 1: Character to ASCII}
+\textbf{Objective:} Find the ASCII value of a user input character.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    char ch = 'A';
+    printf("ASCII value of %c is %d", ch, ch);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+ASCII value of A is 65
+\end{outputbox}
+
+\subsection{Problem 2: Boolean Logic (Manual)}
+\textbf{Objective:} Simulate boolean behavior using integers (1 for true, 0 for false).
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int isSunny = 1; // True
+    int isRaining = 0; // False
+    
+    if(isSunny && !isRaining) {
+        printf("Go for a walk.");
+    } else {
+        printf("Stay inside.");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Go for a walk.
+\end{outputbox}
+
+\section{Control Structures and For Loop}
+
+\subsection{Problem 1: Even or Odd}
+\textbf{Objective:} Check if a number is even or odd using `if-else`.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int n = 7;
+    if(n % 2 == 0) printf("%d is Even", n);
+    else printf("%d is Odd", n);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+7 is Odd
+\end{outputbox}
+
+\subsection{Problem 2: Sum of Natural Numbers}
+\textbf{Objective:} Sum first 10 numbers using `for` loop.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int sum = 0;
+    for(int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    printf("Sum of 1-10: %d", sum);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Sum of 1-10: 55
+\end{outputbox}
+
+\section{Break, Continue, While, Switch}
+
+\subsection{Problem 1: Skip Number 5 (Continue)}
+\textbf{Objective:} Print 1 to 7 but skip 5 using `continue`.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    while(i < 7) {
+        i++;
+        if(i == 5) continue;
+        printf("%d ", i);
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+1 2 3 4 6 7
+\end{outputbox}
+
+\subsection{Problem 2: Grade Checker (Switch)}
+\textbf{Objective:} Print remarks based on grade letter.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    char grade = 'B';
+    switch(grade) {
+        case 'A': printf("Excellent"); break;
+        case 'B': printf("Good"); break;
+        default: printf("Fail");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Good
+\end{outputbox}
+
+\section{Loop Practice Problems}
+
+\subsection{Problem 1: Count Digits}
+\textbf{Objective:} Count digits in an integer using `while`.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int n = 4521, count = 0;
+    while(n != 0) {
+        n /= 10;
+        count++;
+    }
+    printf("Total digits: %d", count);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Total digits: 4
+\end{outputbox}
+
+\subsection{Problem 2: Input Validation (Do-While)}
+\textbf{Objective:} Keep asking for a positive number.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int n;
+    // Hardcoded input simulation
+    n = 10; 
+    do {
+        if (n > 0) printf("Accepted: %d", n);
+    } while(n <= 0);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Accepted: 10
+\end{outputbox}
+
+\section{Patterns}
+
+\subsection{Problem 1: Right Angle Triangle}
+\textbf{Objective:} Print a triangle of stars.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    for(int i=1; i<=3; i++) {
+        for(int j=1; j<=i; j++) printf("* ");
+        printf("\n");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+* \\
+* * \\
+* * * \end{outputbox}
+
+\subsection{Problem 2: Square Pattern}
+\textbf{Objective:} Print a $3 \times 3$ square of numbers.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    for(int i=1; i<=3; i++) {
+        for(int j=1; j<=3; j++) printf("%d ", j);
+        printf("\n");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+1 2 3 \\
+1 2 3 \\
+1 2 3 
+\end{outputbox}
+
+\section{1D Arrays}
+
+\subsection{Problem 1: Array Sum}
+\textbf{Objective:} Calculate the sum of array elements.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 30, 40};
+    int sum = 0;
+    for(int i=0; i<4; i++) sum += arr[i];
+    printf("Sum: %d", sum);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Sum: 100
+\end{outputbox}
+
+\subsection{Problem 2: Find Maximum}
+\textbf{Objective:} Find largest number in an array.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int arr[] = {5, 12, 3, 9};
+    int max = arr[0];
+    for(int i=1; i<4; i++) {
+        if(arr[i] > max) max = arr[i];
+    }
+    printf("Max: %d", max);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Max: 12
+\end{outputbox}
+
+% ==========================================
+% PART 2: FINAL EXAM TOPICS
+% ==========================================
+
+\newpage
+\section{Final: 2D Arrays}
+
+\subsection{Problem 1: Matrix Addition}
+\textbf{Objective:} Add two $2 \times 2$ matrices.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int a[2][2] = {{1,2},{3,4}};
+    int b[2][2] = {{5,6},{7,8}};
+    printf("Sum Matrix:\n");
+    for(int i=0; i<2; i++) {
+        for(int j=0; j<2; j++) {
+            printf("%d ", a[i][j] + b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Sum Matrix:\\
+6 8 \\
+10 12 
+\end{outputbox}
+
+\subsection{Problem 2: Transpose Matrix}
+\textbf{Objective:} Print rows as columns.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    int mat[2][2] = {{1, 2}, {3, 4}};
+    printf("Transpose:\n");
+    for(int i=0; i<2; i++) {
+        for(int j=0; j<2; j++) {
+            printf("%d ", mat[j][i]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Transpose:\\
+1 3 \\
+2 4 
+\end{outputbox}
+
+\section{Functions and Recursion}
+
+\subsection{Problem 1: Check Prime Function}
+\textbf{Objective:} Function that returns 1 if Prime, 0 if not.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int checkPrime(int n) {
+    if (n < 2) return 0;
+    for(int i=2; i<n; i++) {
+        if(n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    if(checkPrime(7)) printf("7 is Prime");
+    else printf("7 is not Prime");
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+7 is Prime
+\end{outputbox}
+
+\subsection{Problem 2: Recursive Factorial}
+\textbf{Objective:} Find factorial using recursion.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int fact(int n) {
+    if (n == 0) return 1;
+    return n * fact(n - 1);
+}
+
+int main() {
+    printf("Factorial of 5: %d", fact(5));
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Factorial of 5: 120
+\end{outputbox}
+
+\section{Pointers and DMA}
+
+\subsection{Problem 1: Swap with Pointers}
+\textbf{Objective:} Swap two variables using Call by Reference.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int a = 10, b = 20;
+    swap(&a, &b);
+    printf("a: %d, b: %d", a, b);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+a: 20, b: 10
+\end{outputbox}
+
+\subsection{Problem 2: Dynamic Memory Allocation}
+\textbf{Objective:} Create an array using `malloc`.
+
+\begin{lstlisting}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = (int*)malloc(3 * sizeof(int));
+    if(ptr == NULL) return 1;
+    
+    ptr[0] = 10; ptr[1] = 20; ptr[2] = 30;
+    
+    printf("Dynamic Value: %d", ptr[1]);
+    free(ptr);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Dynamic Value: 20
+\end{outputbox}
+
+\section{Strings}
+
+\subsection{Problem 1: String Length}
+\textbf{Objective:} Calculate length without `strlen`.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    char str[] = "Hello";
+    int i;
+    for(i=0; str[i] != '\0'; i++);
+    printf("Length: %d", i);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Length: 5
+\end{outputbox}
+
+\subsection{Problem 2: Reverse String}
+\textbf{Objective:} Reverse a string in place.
+
+\begin{lstlisting}
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "Code";
+    int len = strlen(str);
+    for(int i=0; i<len/2; i++) {
+        char temp = str[i];
+        str[i] = str[len-1-i];
+        str[len-1-i] = temp;
+    }
+    printf("Reversed: %s", str); 
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Reversed: edoC
+\end{outputbox}
+
+\section{Structure}
+
+\subsection{Problem 1: Student Data}
+\textbf{Objective:} Store and print student details.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Student s1 = {"John", 21};
+    printf("Student: %s, Age: %d", s1.name, s1.age);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Student: John, Age: 21
+\end{outputbox}
+
+\subsection{Problem 2: Add Distances}
+\textbf{Objective:} Add two distances in feet/inches.
+
+\begin{lstlisting}
+#include <stdio.h>
+
+struct Distance {
+    int feet;
+    int inch;
+};
+
+int main() {
+    struct Distance d1 = {5, 8}, d2 = {3, 5}, sum;
+    sum.feet = d1.feet + d2.feet;
+    sum.inch = d1.inch + d2.inch;
+    
+    if(sum.inch >= 12) {
+        sum.feet++;
+        sum.inch -= 12;
+    }
+    printf("Total: %d' %d\"", sum.feet, sum.inch);
+    return 0;
+}
+\end{lstlisting}
+
+\begin{outputbox}
+Total: 9' 1"
+\end{outputbox}
+
+\end{document}
